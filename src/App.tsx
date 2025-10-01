@@ -1,8 +1,7 @@
-import './App.css'
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-import LiveData from './components/LiveData'
-import Navbar from './components/navbar'
+import Navbar from './components/Navbar'
 import RecentData from './components/RecentData'
+import CurrentData from "./components/CurrentData";
 
 const App = () => {
   return (
@@ -10,8 +9,8 @@ const App = () => {
       <Navbar />
       <div>
         <Routes>
-          <Route path="/" element={<Navigate to="/live" />} />
-          <Route path="/live" element={<LiveData />} />
+          <Route path="/" element={<Navigate to="/current-data" />} />
+          <Route path="/current-data" element={<CurrentData />} />
           <Route path="/recent-data" element={<RecentData />} />
         </Routes>
       </div>

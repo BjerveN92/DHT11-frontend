@@ -8,7 +8,7 @@ const RecentData = () => {
   useEffect(() => {
     const fetchRecentData = async () => {
       try {
-        const res = await api.get("/sensordata"); // backend endpoint
+        const res = await api.get("/api/sensordata"); // backend endpoint
         setRecentData(res.data);
       } catch (err) {
         console.error(err);
@@ -19,9 +19,9 @@ const RecentData = () => {
   }, []);
 
   return (
-    <div className="recentSensorData-container">
+    <div className="just-a-container">
       <h2>SensorData Recent</h2>
-      <ul className="listOfSensorData">
+      <ul className="sensorData-list">
         {recentData.map((entry, idx) => (
           <li key={idx}>
             Tid: {entry.timestamp} - 
