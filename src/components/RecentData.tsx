@@ -18,7 +18,7 @@ const RecentData = () => {
     };
 
     fetchRecentData();
-    const id = setInterval(fetchRecentData, 2000); // uppdatera var 2s
+    const id = setInterval(fetchRecentData, 2000);
     return () => { mounted = false; clearInterval(id); };
   }, []);
 
