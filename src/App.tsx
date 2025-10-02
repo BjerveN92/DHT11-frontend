@@ -1,11 +1,12 @@
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-import Navbar from './components/Navbar'
-import RecentData from './components/RecentData'
+import "./styles.css";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Navbar from "./components/navbar"; // min kompontent har ju stort N i Navbar.tsx, konstigt det funkar ändå? 
+import RecentData from "./components/RecentData";
 import CurrentData from "./components/CurrentData";
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Navbar />
       <div>
         <Routes>
@@ -14,8 +15,8 @@ const App = () => {
           <Route path="/recent-data" element={<RecentData />} />
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 };
 
-export default App
+export default App;

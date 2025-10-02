@@ -1,0 +1,87 @@
+:root {
+  --bg: #a38c69;
+  --panel: #a38c69;
+  --text: #752b2b;
+  --muted: #1c3a6e;
+  --border: #752b2b;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Navbar (enkel) */
+nav {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: #0b1220;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+}
+nav a:hover {
+  background: #36465c;
+}
+
+/* Huvudcontainer i mitten */
+.just-a-container {
+  max-width: 900px;
+  margin: 4rem auto;            /* centrerar horisontellt */
+  background: var(--panel);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+/* Rubrik */
+.title {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  letter-spacing: .3px;
+}
+
+/* Scrollbar lista för historik */
+.sensorData-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 360px;          /* gör listan scrollbar */
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #a38c69;
+;
+}
+.sensorData-list li {
+  padding: .75rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.sensorData-list li:last-child { border-bottom: none; }
+
+/* Valfri scrollbar-styling (Chrome/Edge/Safari) */
+.sensorData-list::-webkit-scrollbar { width: 10px; }
+.sensorData-list::-webkit-scrollbar-track { background: #0b1220; border-radius: 8px; }
+.sensorData-list::-webkit-scrollbar-thumb { background: #334155; border-radius: 8px; }
+.sensorData-list::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* Större text i CurrentData */
+.current-data .title { font-size: 1.75rem; }
+.current-data h5 { margin: .25rem 0 1rem; color: var(--muted); }
+.current-data p {
+  font-size: 2.75rem;          /* stor text för Tid, Temp, Fukt */
+  font-weight: 600;
+  margin: 1.50rem 0;
+}
