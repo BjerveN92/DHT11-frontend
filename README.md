@@ -1,73 +1,25 @@
-# React + TypeScript + Vite
+# 🌐 DHT11 Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Detta är frontend-delen av ett IoT-projekt för att visualisera sensordata (temperatur och luftfuktighet) från en Arduino DHT11-sensor. Applikationen är byggd med **React** och **TypeScript**, kommunicerar med ett backend via API-anrop och visar datan som hämtas från en MongoDB-databas.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Frontend-stack 
+- **React**:
+- **TypeScript**:
+- **Vite**:
+- **Axios**: 
 
-## React Compiler
+## 🚀 Kom igång (lokalt)
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+Följ dessa steg för att köra projektet lokalt: https://github.com/BjerveN92/myFirstIoT-project
 
-## Expanding the ESLint configuration
+klona ner backenden och följ dess intruktioner: 
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Klona ner repot till din dator och öppna i Visual Studio Code**:
+2. npm install
+3. npm run dev
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+och nu går du in på Localhost:5173 och nu kan du testa applikationen lokalt, lycka till! 
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+  
