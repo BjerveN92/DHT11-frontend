@@ -12,9 +12,9 @@ Detta är frontend-delen av ett IoT-projekt för att visualisera sensordata (tem
 
 ## 🚀 Kom igång (lokalt)
 
-Följ dessa steg för att köra projektet lokalt: https://github.com/BjerveN92/myFirstIoT-project
+Följ dessa steg för att köra projektet lokalt: 
 
-klona ner backenden och följ dess intruktioner: 
+klona ner backenden och följ dess intruktioner: https://github.com/BjerveN92/myFirstIoT-project
 
 1. **Klona ner repot till din dator och öppna i Visual Studio Code**:
 2. npm install
